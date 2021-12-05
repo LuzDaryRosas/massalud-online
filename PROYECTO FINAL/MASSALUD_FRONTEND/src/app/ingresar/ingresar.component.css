@@ -1,0 +1,34 @@
+*{
+    font-family: Arial;
+}
+
+.ingresar{
+    font-size: 25px;
+    color: rgb(4, 4, 17);
+    margin-left: 55px;
+}
+
+.identificacion{
+    color: rgb(4, 4, 15);
+    margin-left: 55px;
+    font-size: 20px;
+}
+
+#inputState{
+color: rgb(22, 22, 36);
+font-size: 20px;
+}
+
+.btn-group .button {
+    background-color: rgb(70, 132, 214);
+    border: 1px solid rgb(243, 244, 247);
+    color: white;
+    padding: 14px 29px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 55px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }

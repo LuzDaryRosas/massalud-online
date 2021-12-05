@@ -1,0 +1,145 @@
+<br>
+<div align="center"><img src="assets/img/+saludweb.png">
+</div>  <br> <br> 
+
+    <div class="bienvenida">
+    <h3>Estimado paciente, por favor ingrese los datos de fecha, y hora para agendar su cita:</h3><br><br>
+    </div>
+
+        <div class="medico">
+        Medico  <span class="req">*  </span>    
+        <select id="inputState" name="iddoc" display="inline-block" [(ngModel)]="citaForm.id_doctor">
+        <option value=1 selected>Karen Mantilla  - Medicina General</option>
+        <option value=2>Luis Sarmiento  - Cardiología</option>
+        <option value=3>Esperanza Montoya Castro  - Medicina General</option>
+        <option value=4>Sergio Andres Reyes Paredes  - Medicina General</option>
+        <option value=5>Angela Liliana Baena Gómez  - Gastroenterología</option>
+        <option value=6>Luisa Covelli  - Ginecología</option>
+        <option value=7>Nicolas Alzate Romero  - Pediatría</option>
+        <option value=8>Karen Patricia Guarin Peña  - Neurocirugia</option>
+        <option value=9>Oscar Mauricio Suarez Vidal  - Oftalmología</option>    
+        </select>
+        </div><br> 
+
+        
+       
+                   
+
+
+
+
+
+        <!-- <div class="enviar1">
+            <button type="button" class="btn" (click)="escogeEspecialidad()">Enviar</button>
+          </div><br> -->
+<!-- div class="condoc">
+            <h3>Doctores</h3>
+            <div class="grid grid-pad">
+              <tr *ngFor="let doctor of doctores">
+              <td>{{doctor.nombre_completo}}</td>
+              <td>{{doctor.especialidad}}</td>
+              </tr>
+            </div>´
+            <input type="text" [(ngModel)]="doctorForm.nombre_completo" >
+            <select class="form-control col-8" [(ngModel)]="doctorForm.id_doctor">
+                <option
+                *ngFor="let doctor2 of doctores;"
+                 value="{{doctor2.id}}">{{doctor2.nombre_completo}} </option>
+            </select>
+            <button type="button" (click)="enviar()">Enviar</button>
+</div> -->
+
+
+
+
+<!-- adicione calendario -->
+
+<!-- <p class="left">
+    Fecha de la cita <input id="datepicker" name="fecha_formulario" [(ngModel)]="citaForm.fecha_cita">
+    
+    <script type="text/javascript">
+        // var disabledDate = {{ disabledDate|safe }};
+        $("#datepicker").datepicker({
+        format: 'mm/dd/yyyy',       
+        datesDisabled: disabledDate,
+        daysOfWeekDisabled: [0,6],   //desahabilita domingos y sabados
+        autoclose:true,
+        startDate: new Date(),
+        todayHighlight: true,
+        });
+    
+       /*  $('[name="fecha_formulario"]').change( function(){
+      window.location.href="/crea_cita?id_doc="+$('[name="doctor_seleccionado_formulario"]').val()+"&date="+$('[name="fecha_formulario"]').val();
+    });    */
+    
+        //AQUI
+        </script>
+    
+    <br/> -->
+
+    <div class="fecha">
+        Fecha   <span class="req2">*  </span>    
+        <input type="date" name="day" [(ngModel)]="citaForm.fecha_cita"/>
+        <br></div><br>
+
+
+
+
+
+
+
+        <div class="horarios">
+        Horario  <span class="req">*  </span>    
+        <select id="inputState" name="tipodoc_formulario" display="inline-block" [(ngModel)]="citaForm.id_franja">
+        <option value=3 selected>8:00</option>
+        <option value=4 >8:30</option>
+        <option value=5 >9:00</option>
+        <option value=6 >9:30</option>
+        <option value=7 >10:30</option>
+        <option value=8 >11:00</option>
+        <option value=9 >11:30</option>
+        <option value=10 >12:00</option>
+        <option value=11 >14:00</option>
+        <option value=12 >14:30</option>
+        <option value=13 >15:00</option>
+        <option value=14 >15:30</option>
+        <option value=15 >16:30</option>
+        <option value=16 >17:00</option>
+        <option value=17 >17:30</option>
+        <option value=18 >18:00</option>
+        </select>
+        </div>
+
+        <div align="center" class="consulta">
+            <h3>Ingrese sus datos - Debe estar registrado para Agendarse</h3><br>
+            <!-- <div *ngIf="!pacienteEncontrado"> -->
+            <div class="caja1">
+                Tipo de documento<span class="req">*</span>    
+                <select id="inputState" name="tipodoc_formulario" display="inline-block" [(ngModel)]="pacienteForm.tipo_documento">
+                <option value='CC-Cédula de ciudadanía' selected>CC-Cédula de ciudadanía</option>
+                <option value='CE-Cédula de extranjería'>CE-Cédula de extranjería</option>
+                <option value='PEP-Permiso especial de permanencia'>PEP-Permiso especial de permanencia</option>
+                <option value='TI-Tarjeta de identidad'>TI-Tarjeta de identidad</option>
+                <option value='RC-Registro civil de nacimiento'>RC-Registro civil de nacimiento</option>                 
+                <option value='PSP-Pasaporte'>PSP-Pasaporte</option></select>    
+                    
+                Número<span class="req">*</span>
+                <input type="value"  name="numero_documento_formulario" maxlength="10" [(ngModel)]="pacienteForm.numero_documento"><br><br> 
+            </div>
+            <div class="enviar1">
+              <button type="button" class="btn" (click)="consultaPaciente()">Consultar</button>
+            </div><br>
+            </div>
+            <div *ngIf="pacienteEncontrado">
+              <div align="center" class="consulta"> 
+            <h3>Paciente: <em>{{dataPaciente.nombres}} {{dataPaciente.apellidos}}</em></h3>
+            <h3>Su cita sera agendada </h3> 
+            <div class="enviar1">
+                <!-- <button type="button" class="btn" (click)="Crear()">Confirmar</button> -->
+                <!-- <button type="button" class="btn" >Confirmar</button> -->
+              </div><br>   
+            </div>
+            <div *ngIf="!pacienteEncontrado">
+                <div class="enviar1">
+                    <button type="button" class="btn" (click)="DirigiraRegistrar()">Ir a Registrarse</button>
+                  </div><br>      

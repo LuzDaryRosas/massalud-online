@@ -1,0 +1,22 @@
+.contenedor1{
+	min-height:480px;
+  border-radius: 25px;
+  margin-left: 15px;
+}
+
+.card-body{
+  font-size: 17px;
+  text-align: justify;
+}
+
+.enviar1 .btn {
+  background-color: rgb(24, 132, 221);
+  border-radius: 5px;
+  border-bottom: rgb(24, 132, 221);
+  font-size: 16px;
+  color:rgb(243, 239, 239);
+  padding: 10px;
+}
+
+
+

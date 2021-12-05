@@ -1,0 +1,244 @@
+*{
+    margin:0px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
+   
+  .pt-5{
+    display: flex;
+  }
+
+  .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+  }
+
+  /*onda*/
+  .wave{
+    height: 100%;
+    width: 100%;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }
+
+  .btn-group .button {
+    background-color: rgb(70, 132, 214);
+    border: 1px solid rgb(243, 244, 247);
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0px 10px 40px 100px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+/*imagenes doctores*/
+  .container .card {
+    transition: all 0.5s;
+    align-items: center;
+    color: #311a67;
+  }
+
+/*titulo*/
+  .textos{
+    width: 50%;
+    color:rgb(43, 7, 145);
+    vertical-align: text-top;  
+  }
+
+  h1 {
+    font-size: 70px;
+    
+  }
+  .card h1{
+    font-size: 20px;
+  }
+  .container-envelope h1{
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 600px;
+    color: #0575E6;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 25px;
+  } 
+
+.titulo h2{
+  color: #074e96;
+  margin-left: 85px;
+}
+
+
+.imagendoctor{
+  height: 500px;
+  width: 500px;
+}
+
+/*despliega el menu*/
+  .textos a{
+    display: inline-block;
+    color:rgb(92, 49, 173);
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid rgb(34, 14, 150);
+    border-radius: 3px;
+    text-align: center;
+    animation: arriba 1s ease-in;
+  }
+  
+  .enlaces{
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .a{
+    background-color: #FFEFBA;
+  }
+  
+  .uno{
+  -webkit-clip-path: circle(0% at 0 0);
+  clip-path: circle(0% at 0 0);
+  }
+
+  .dos{
+  -webkit-clip-path: circle(150% at 0 0);
+  clip-path: circle(150% at 0 0);
+  }
+  
+  @keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+  
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  
+  @keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+  
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  
+  @keyframes arriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+  
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  
+  @media screen and (max-width:1000px){
+    img{
+        height: 400px;
+    }
+  
+  }
+  
+  @media screen and (max-width:800px){
+    img{
+        height: 370px;
+    }
+    .textos h1{
+        font-size: 70px;
+    }
+  
+    .textos h2{
+        font-size: 25px;
+    }
+    
+  }
+  
+  @media screen and (max-width:700px){
+    img{
+        height: 250px;
+    }
+    .textos h1{
+        font-size: 40px;
+    }
+  
+    .textos h2{
+        font-size: 15px;
+    }
+    
+  }
+  
+  @media screen and (max-width:450px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 60px;
+    }    
+  }
+  
+  @media screen and (max-width:340px){
+    img{
+        height: 160px;
+    }
+    .textos h1{
+        font-size: 35px;
+    }
+    .textos a{
+        width: 120px;
+    }
+    .textos h2{
+        font-size: 15px;
+    }
+  }
+/*imagenes doctores*/  
+  .card img{
+    display: block;
+    height: 400px;
+    animation: arriba 1s ease-in;
+    border-image: 5px;
+  }
+  
+  /* Baner*/

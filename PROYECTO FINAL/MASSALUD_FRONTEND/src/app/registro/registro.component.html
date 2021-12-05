@@ -1,0 +1,73 @@
+<br>
+<div align="center"><img src="assets/img/+saludweb.png"></div>  <br> <br>
+
+<form class="contenedor1">
+    <h1 align="center"> Registro de Pacientes </h1> <br>
+    <h2 class="font-weight-bold">Política de Tratamiento de Datos</h2>
+
+<div class="card-body">
+        <p>Dando cumplimiento a lo ​dispuesto en la Ley estatutaria 1581 de 2012 y a su Decreto Reglamentario 1377 de 2013, Mas Salud adopta la presente política para el tratamiento de datos personales, la cual será informada a todos los titulares de los datos recolectados o que en el futuro se obtengan en el ejercicio de las actividades propias de nuestros procesos médicos asistenciales. 
+        De esta manera, Mas Salud manifiesta que garantiza los derechos de la privacidad, la intimidad, el buen nombre, en el tratamiento de los datos personales, y en consecuencia todas sus actuaciones se regirán por los principios de legalidad, finalidad, libertad, veracidad o calidad, transparencia, acceso y circulación restringida, seguridad y confidencialidad. 
+        Todas las personas que, en desarrollo de diferentes actividades médicos asistenciales, sean permanentes u ocasionales, llegaran a suministrar a Mas Salud cualquier tipo de información o dato personal, podrá conocerla, actualizarla y rectificarla.
+        Autorizo a Mas Salud, para que recolecte mis datos personales y los conserve dentro de sus bases, cuyo uso se encuentra destinado a mantener una constante comunicación con los interesados.
+        Autorizo para que los datos por mi suministrados sean utilizados con la finalidad de informarme sobre sus actividades y procesos médicos asistenciales.</p>
+</div>
+
+<div class="card-footer text-muted">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">Acepto</label>
+</div>
+    
+    <h2 align="center"> Datos del Paciente </h2><br>
+    
+<div class="caja1">
+    Tipo de documento<span class="req">*</span>    
+    <select id="inputState" name="tipodoc_formulario" display="inline-block" [(ngModel)]="registroForm.tipo_documento">
+    <option value='CC-Cédula de ciudadanía' selected>CC-Cédula de ciudadanía</option>
+    <option value=2 >CE-Cédula de extranjería</option>
+    <option value=3 >PEP-Permiso especial de permanencia</option>
+    <option value=4>TI-Tarjeta de identidad</option>
+    <option value=5>RC-Registro civil de nacimiento</option>                 
+    <option value=6>PSP-Pasaporte</option></select>    
+        
+    Número<span class="req">*</span>
+    <input type="value"  name="numero_documento_formulario" maxlength="10" [(ngModel)]="registroForm.numero_documento"><br><br> 
+</div>
+
+<div class="caja2"> 
+    Nombres<span class="req">*</span>
+    <input type="text" name="nombres_seleccionado_formulario" required  maxlength="50"  autocomplete="off" [(ngModel)]="registroForm.nombres"/>
+    <label class="field-wrap"></label> 
+    Apellidos<span class="req">*</span>
+    <input type="text" name ="apellidos_seleccionado_formulario" required maxlength="50"  autocomplete="off"  [(ngModel)]="registroForm.apellidos"/>
+    <label class="field-wrap"></label> <br><br>  
+</div>
+
+<div class="caja3"> 
+        Fecha de nacimiento<span class="req">*</span>
+        <input type="date" name="fecha_nacimiento_seleccionado_formulario" id="fecha" [(ngModel)]="registroForm.fecha_nacimiento" >
+        <label for="fecha"></label><br><br>
+        Número celular<span class="req">*</span>
+        <input type="tel" name="celular_seleccionado_formulario" id="telefono" 
+        maxlength="10" size="15"  [(ngModel)]="registroForm.numero_celular" />
+        <label for="telefono" class="propiedad"></label><br><br>
+</div>
+
+<div class="caja4">         
+        Correo electrónico <span class="req">*</span>
+        <input type="email" id="email" name="correo_electronico_seleccionado_formulario" maxlength="60" placeholder="(email)" [(ngModel)]="registroForm.correo_electronico"/>
+        <label for="email" class="propiedad"></label><br>
+</div><br>
+
+<div class="enviar1">
+    <button type="button" class="btn" (click)="Envio()">Enviar</button>
+</div><br>
+        
+
+
+
+
+
+
+
+ 

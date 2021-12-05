@@ -1,0 +1,65 @@
+<br>
+<div align="center"><img src="assets/img/+saludweb.png"></div>  <br> <br>
+
+<div align="center" class="consulta">
+<h3>CONSULTE SU CITA</h3><br>
+<div *ngIf="!pacienteEncontrado">
+  <div class="caja1">
+    Tipo de documento<span class="req">*</span>    
+    <select id="inputState" name="tipodoc_formulario" display="inline-block" [(ngModel)]="pacienteForm.tipo_documento">
+    <option value='CC-Cédula de ciudadanía' selected>CC-Cédula de ciudadanía</option>
+    <option value='CE-Cédula de extranjería'>CE-Cédula de extranjería</option>
+    <option value='PEP-Permiso especial de permanencia'>PEP-Permiso especial de permanencia</option>
+    <option value='TI-Tarjeta de identidad'>TI-Tarjeta de identidad</option>
+    <option value='RC-Registro civil de nacimiento'>RC-Registro civil de nacimiento</option>                 
+    <option value='PSP-Pasaporte'>PSP-Pasaporte</option></select>    
+        
+    Número<span class="req">*</span>
+    <input type="value"  name="numero_documento_formulario" maxlength="10" [(ngModel)]="pacienteForm.numero_documento"><br><br> 
+</div>
+<div class="enviar1">
+  <button type="button" class="btn" (click)="consultaPaciente()">Consultar</button>
+</div><br>
+</div>
+<div *ngIf="pacienteEncontrado">
+<h3>Paciente: <em>{{dataPaciente.nombres}} {{dataPaciente.apellidos}}</em></h3>
+
+<table id="customers">
+  
+  <tr>
+    <th>No.</th>
+    <th>Fecha</th>
+    <th>Doctor</th>
+    <th>Especialidad</th>
+    <th>Hora</th>
+    <th>Acción</th>
+  </tr>
+
+  
+    <tbody>
+    <tr *ngFor="let cita of dataCita; let i = index">
+     <td> {{i}}</td>
+     <!-- <td> {{cita.id_cita}}</td> -->
+     <td> {{cita.fecha_cita}}</td>
+     <td>{{cita.nombre_completo}} </td>
+     <td>{{cita.especialidad}}</td>
+     <td> {{cita.hora_atencion}}</td>
+     <td><button type="button" class="btn" (click)="Delete(cita.id_cita,i)">Eliminar</button></td>
+    </tr>  
+    </tbody>
+
+  
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
